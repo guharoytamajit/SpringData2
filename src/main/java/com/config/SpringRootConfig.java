@@ -50,7 +50,6 @@ public class SpringRootConfig {
 		LocalContainerEntityManagerFactoryBean emf = new LocalContainerEntityManagerFactoryBean();
 		emf.setDataSource(dataSource2());
 		emf.setPackagesToScan(new String[] { "com.entity" });
-
 		JpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
 		emf.setJpaVendorAdapter(vendorAdapter);
 		emf.setJpaProperties(jpaProperties());
