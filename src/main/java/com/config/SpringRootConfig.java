@@ -24,6 +24,11 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
  * @EnableTransactionManagement and <tx:annotation-driven/> are responsible for
  * registering the necessary Spring components that power annotation-driven
  * transaction management
+ * 
+ * @EnableTransactionManagement is more flexible; it will fall back to a by-type
+ * lookup for any PlatformTransactionManager bean in the container. Thus the
+ * name can be "txManager", "transactionManager", or "tm": it simply does not
+ * matter.
  */
 public class SpringRootConfig {
 
